@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Book</title>
+    <link rel="stylesheet" href="takebookstyle.css">
+</head>
+<body>
+    <!-- Include Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">MyWebsite</div>
+        <button class="navbar-toggler" onclick="toggleMenu()">&#9776;</button>
+        <div class="navbar-menu" id="navbarMenu">
+            <a href="signup.html">Register</a>
+            <a href="bookdetails.html">Book Details</a>
+            <a href="addbook.html">Add Book</a>
+            <a href="takebook.html">Take Book </a>
+            <a href="returnbook.html">Return Book</a>
+            <a href="deletebook.html">Delete Book</a>
+        </div>
+    </nav>
+
+    <!-- Take Book Form -->
+    <div class="take-book-container">
+        <h1>Take Book</h1>
+        <form id="takeBookForm">
+            <div class="form-group">
+                <label for="bookName">Book Name:</label>
+                <input type="text" id="bookName" name="bookName" required>
+            </div>
+            <button onclick="submitForm()" type="submit">Take Book</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script src="takebookjs.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="addbookstyle.css">
+</head>
+<body>
+    <!-- Include Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">MyWebsite</div>
+        <button class="navbar-toggler" onclick="toggleMenu()">&#9776;</button>
+        <div class="navbar-menu" id="navbarMenu">
+            <a href="signup.html">Register</a>
+            <a href="bookdetails.html">Book Details</a>
+            <a href="addbook.html">Add Book</a>
+            <a href="takebook.html">Take Book </a>
+            <a href="returnbook.html">Return Book</a>
+            <a href="deletebook.html">Delete Book</a>
+        </div>
+    </nav>
+
+    <!-- Add Book Form -->
+    <div class="add-book-container">
+        <h1>Add New Book</h1>
+        <form id="addBookForm">
+            <div class="form-group">
+                <label for="bookName">Book Name:</label>
+                <input type="text" id="bookName" name="bookName" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="Available">Available</option>
+                    <option value="Taken">Taken</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bookImage">Book Image:</label>
+                <input type="file" id="bookImage" name="bookImage" accept="image/*" required>
+            </div>
+            <div class="noteblock"> Note : Add the cover page image of the book</div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <input type="text" id="message" name="message" maxlength="4000" placeholder="Add descrition about the book" required></input>
+            </div>
+            <button onclick="submitForm()" type="submit">Add Book</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script src="addbookjs.js"></script>
+    <script>
+        // Include Navbar
+        document.getElementById('navbar').innerHTML = '<object type="text/html" data="navbar.html" ></object>';
+        function toggleMenu() {
+    document.getElementById('navbarMenu').classList.toggle('active');
+    }
+
+        // Handle Add Book Form Submission
+        document.getElementById('addBookForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Book added successfully!');
+            // You can handle the form submission and data storage here
+        });
+    </script>
+</body>
+</html>

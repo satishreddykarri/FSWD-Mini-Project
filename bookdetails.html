@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Details</title>
+    <link rel="stylesheet" href="booksstyle.css">
+</head>
+<body>
+    <!-- Include Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">MyWebsite</div>
+        <button class="navbar-toggler" onclick="toggleMenu()">&#9776;</button>
+        <div class="navbar-menu" id="navbarMenu">
+            <a href="signup.html">Register</a>
+            <a href="bookdetails.html">Book Details</a>
+            <a href="addbook.html">Add Book</a>
+            <a href="takebook.html">Take Book </a>
+            <a href="returnbook.html">Return Book</a>
+            <a href="deletebook.html">Delete Book</a>
+        </div>
+    </nav>
+
+    <!-- Book Details -->
+    <div class="book-details">
+        <div class="book">
+            <img src="https://res.cloudinary.com/drf5zyysx/image/upload/v1717733845/download_q0tbnw.jpg" alt="Book 1">
+            <h2>Book 1</h2>
+            <p>Price: $10</p>
+            <p>Status: <span class="status">Available</span></p>
+            <button onclick="toggleStatus(this)">Toggle Status</button>
+        </div>
+        <div class="book">
+            <img src="https://res.cloudinary.com/drf5zyysx/image/upload/v1717733918/download_3_sd7fya.jpg" alt="Book 1">
+            <h2>Book 2</h2>
+            <p>Price: $15</p>
+            <p>Status: <span class="status">Available</span></p>
+            <button onclick="toggleStatus(this)">Toggle Status</button>
+        </div>
+        <div class="book">
+            <img src="https://res.cloudinary.com/drf5zyysx/image/upload/v1717733925/download_4_swatug.jpg" alt="Book 1">
+            <h2>Book 3</h2>
+            <p>Price: $20</p>
+            <p>Status: <span class="status">Available</span></p>
+            <button onclick="toggleStatus(this)">Toggle Status</button>
+        </div>
+        <div class="book">
+            <img src="https://res.cloudinary.com/drf5zyysx/image/upload/v1717734070/download_1_rqujw4.jpg" alt="Book 1">
+            <h2>Book 4</h2>
+            <p>Price: $25</p>
+            <p>Status: <span class="status">Available</span></p>
+            <button onclick="toggleStatus(this)">Toggle Status</button>
+        </div>
+        <div class="book">
+            <img src="https://res.cloudinary.com/drf5zyysx/image/upload/v1717733910/download_2_z8cpuk.jpg" alt="Book 1">
+            <h2>Book 5</h2>
+            <p>Price: $30</p>
+            <p>Status: <span class="status">Available</span></p>
+            <button onclick="toggleStatus(this)">Toggle Status</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script src="booksjs.js"></script>
+</body>
+</html>
